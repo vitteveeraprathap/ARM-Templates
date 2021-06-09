@@ -1,0 +1,18 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "strAcc1": {
+            "value": "veera465"
+        },
+        "strAcc2": {
+            "value": "veera466"
+        },
+        "strAcc3": {
+            "value": "veera467"
+        },
+        "strAcc4": {
+            "value": "veera468"
+        }
+    }
+}

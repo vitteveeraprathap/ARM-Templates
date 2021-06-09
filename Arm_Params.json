@@ -1,0 +1,30 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "strAcc1": {
+            
+            "value": "str465"
+        },
+        "strAcc2": {
+           
+            "value": "str466"
+        },
+        "strAcc3": {
+            
+            "value": "str467"
+        },
+        "strAcc4": {
+            
+            "value": "str468"
+        },
+        "strAcc5": {
+            
+            "value": "str469"
+        },
+        "strAcc6": {
+           
+            "value": "str470"
+        }
+    }
+}

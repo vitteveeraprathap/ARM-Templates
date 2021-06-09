@@ -1,0 +1,28 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "paraArr": {
+            "value": [
+                {
+                    "VnetName": "VnetInSubA",
+                    "ResourceGroupName": "SampleRG",
+                    "SubscriptionId": "f87a1e41-3d13-48de-9985-fbc9d2dcec70",
+                    "VnetAddressSpace": "10.66.0.0/16",
+                    "Region": "eastus",
+                    "Subnets": [
+                        {
+                            "name": "subnet-10-66-1-0-24",
+                            "addressPrefix": "10.66.1.0/24"
+                        }
+                      ] 
+                    }
+                ]
+            }
+        }
+    }
+        
+
+                    
+
+                    

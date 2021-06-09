@@ -1,0 +1,100 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+
+    "parameters": {
+        "strAcc1": {
+            "type": "string",
+
+            "metadata": {
+                "description": "storage account1"
+            },
+            "defaultValue": "veera465"
+
+        },
+
+        "strAcc2": {
+
+            "type": "string",
+            "metadata": {
+                "description": "storage account2"
+            },
+            "defaultValue": "veera466"
+
+        },
+        "strAcc3": {
+
+            "type": "string",
+            "metadata": {
+                "description": "storage account3"
+            },
+            "defaultValue": "veera467"
+
+        },
+        "strAcc4": {
+
+            "type": "string",
+            "metadata": {
+                "description": "storage account4"
+            },
+            "defaultValue": "veera468"
+
+        }
+    },
+
+
+    "variables": {
+
+        "strAcctype": "Standard_LRS",
+        "location": "eastus"
+
+    },
+
+
+    "resources": [
+        {
+            "type": "Microsoft.Storage/storageAccounts",
+            "apiVersion": "2019-06-01",
+            "name": "[parameters('strAcc1')]",
+            "location": "[variables('location')]",
+            "sku": {
+                "name": "[variables('strAcctype')]"
+            },
+            "kind": "StorageV2",
+            "properties": {}
+        },
+        {
+            "type": "Microsoft.Storage/storageAccounts",
+            "apiVersion": "2019-06-01",
+            "name": "[parameters('strAcc2')]",
+            "location": "[variables('location')]",
+            "sku": {
+                "name": "[variables('strAcctype')]"
+            },
+            "kind": "StorageV2",
+            "properties": {}
+        },
+        {
+            "type": "Microsoft.Storage/storageAccounts",
+            "apiVersion": "2019-06-01",
+            "name": "[parameters('strAcc3')]",
+            "location": "[variables('location')]",
+            "sku": {
+                "name": "[variables('strAcctype')]"
+            },
+            "kind": "StorageV2",
+            "properties": {}
+        },
+        {
+            "type": "Microsoft.Storage/storageAccounts",
+            "apiVersion": "2019-06-01",
+            "name": "[parameters('strAcc4')]",
+            "location": "[variables('location')]",
+            "sku": {
+                "name": "[variables('strAcctype')]"
+            },
+            "kind": "StorageV2",
+            "properties": {}
+        }
+    ]
+}

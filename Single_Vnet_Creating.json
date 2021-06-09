@@ -1,0 +1,52 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+
+        "paraArr": {
+            "type": "array"
+        }
+    },
+    "functions": [],
+    "variables": {},
+    "resources": [
+        {
+
+            "apiVersion": "2017-05-10",
+            "name": "[parameters('paraArr').ResourceGroupName]",
+            "type": "Microsoft.Resources/deployments",
+            "resourceGroup": "",
+            "subscriptionId": "[parameters('paraArr').SubscriptionId]",
+        "properties":
+        {
+            "mode": "Incremental",
+            "template": {
+                "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+                "contentVersion": "1.0.0.0",
+                "parameters": {},
+                "variables": {},
+                "resources": [
+                    {
+                        "apiVersion": "2017-10-01",
+                        "type": "Microsoft.Network/virtualNetworks/",
+                        "name": "[parameters('paraArr').VnetName]",
+                        "location": "[parameters('paraArr').Region]",
+                        "properties": {
+                            "addressSpace": {
+                                "addressPrefixes": [
+                                    "[parameters('paraArr').VnetAddressSpace]"
+                                ]
+                            },
+                            "name": "[parameters('paraArr').subnets.name]",
+                            "properties": {
+                                "addressPrefix": "[parameters('paraArr').subnets.addressPrefix]"
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+        }
+    ],
+    "outputs": {}
+}

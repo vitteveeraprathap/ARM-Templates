@@ -1,0 +1,36 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+      "parameters" : {
+          "count" : {
+              "type" : "int",
+              "defaultValue" : 1
+          }
+      },
+
+    "variables": {
+        "StrAcctype": "Standard_LRS",
+        "location": "eastus"
+    },
+
+      "resources": [
+
+        {
+            "type": "Microsoft.Storage/storageAccounts",
+            "apiVersion": "2019-06-01",
+            "name": "[concat('lkjh',copyIndex(465))]",
+            "location": "[variables('location')]",
+            "sku": {
+                "name": "[variables('StrAcctype')]"
+            },
+            "kind": "StorageV2",
+            "copy": {
+                "name": "Strcopy",
+                "count": "[parameters('count')]"
+            },
+            "properties": {}
+        } 
+
+
+    ]
+}

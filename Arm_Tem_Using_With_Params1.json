@@ -1,0 +1,76 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+
+  "parameters": {
+
+    "strAcc1": {
+      "type": "string"
+    },
+    "strAcc2": {
+      "type": "string"
+    },
+    "strAcc3": {
+      "type": "string"
+    },
+    "strAcc4": {
+      "type": "string"
+    }
+},
+
+
+  "variables": {
+
+    "strAcctype": "Standard_LRS",
+    "location": "eastus"
+
+  },
+
+
+  "resources": [
+    {
+      "type": "Microsoft.Storage/storageAccounts",
+      "apiVersion": "2019-06-01",
+      "name": "[parameters('strAcc1')]",
+      "location": "[variables('location')]",
+      "sku": {
+        "name": "[variables('strAcctype')]"
+      },
+      "kind": "StorageV2",
+      "properties": {}
+    },
+    {
+      "type": "Microsoft.Storage/storageAccounts",
+      "apiVersion": "2019-06-01",
+      "name": "[parameters('strAcc2')]",
+      "location": "[variables('location')]",
+      "sku": {
+        "name": "[variables('strAcctype')]"
+      },
+      "kind": "StorageV2",
+      "properties": {}
+    },
+    {
+      "type": "Microsoft.Storage/storageAccounts",
+      "apiVersion": "2019-06-01",
+      "name": "[parameters('strAcc3')]",
+      "location": "[variables('location')]",
+      "sku": {
+        "name": "[variables('strAcctype')]"
+      },
+      "kind": "StorageV2",
+      "properties": {}
+    },
+    {
+      "type": "Microsoft.Storage/storageAccounts",
+      "apiVersion": "2019-06-01",
+      "name": "[parameters('strAcc4')]",
+      "location": "[variables('location')]",
+      "sku": {
+        "name": "[variables('strAcctype')]"
+      },
+      "kind": "StorageV2",
+      "properties": {}
+    }
+  ]
+}

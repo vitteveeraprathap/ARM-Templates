@@ -1,0 +1,72 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "ParameterArray": {
+            "value": [
+                {
+                    "VnetName": "VnetInSubA",
+                    "ResourceGroupName": "RG01",
+                    "SubscriptionId": "f87a1e41-3d13-48de-9985-fbc9d2dcec70",
+                    "VnetAddressSpace": "10.66.0.0/16",
+                    "Region": "eastus2",
+                    "Subnets": [
+                        {
+                            "name": "subnet-10-66-1-0-24",
+                            "addressPrefix": "10.66.1.0/24"
+                        },
+                        {
+                            "name": "subnet-10-66-2-0-24",
+                            "addressPrefix": "10.66.2.0/24"
+                        },
+                        {
+                            "name": "subnet-10-66-3-0-24",
+                            "addressPrefix": "10.66.3.0/24"
+                        },
+                        {
+                            "name": "subnet-10-66-4-0-24",
+                            "addressPrefix": "10.66.4.0/24"
+                        },
+                        {
+                            "name": "subnet-10-66-5-0-24",
+                            "addressPrefix": "10.66.5.0/24"
+                        }
+                    ]
+                },
+                {
+                    "VnetName": "VnetInSubB",
+                    "ResourceGroupName": "RG02",
+                    "SubscriptionId": "f87a1e41-3d13-48de-9985-fbc9d2dcec70",
+                    "VnetAddressSpace": "10.64.0.0/16",
+                    "Region": "eastus",
+                    "Subnets": [
+                        {
+                            "name": "subnet-10-64-1-0-slash-24",
+                            "addressPrefix": "10.64.1.0/24"
+                        },
+                        {
+                            "name": "subnet-10-64-2-0-slash-24",
+                            "addressPrefix": "10.64.2.0/24"
+                        },
+                        {
+                            "name": "subnet-10-64-3-0-slash-24",
+                            "addressPrefix": "10.64.3.0/24"
+                        },
+                        {
+                            "name": "subnet-10-64-4-0-slash-24",
+                            "addressPrefix": "10.64.4.0/24"
+                        },
+                        {
+                            "name": "subnet-10-64-5-0-slash-24",
+                            "addressPrefix": "10.64.5.0/24"
+                        },
+                        {
+                            "name": "subnet-10-64-6-0-slash-24",
+                            "addressPrefix": "10.64.6.0/24"
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
